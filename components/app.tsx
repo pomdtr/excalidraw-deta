@@ -88,7 +88,7 @@ export default function App(props: { drawing: Drawing; readonly?: boolean }) {
       }}
       onChange={props.readonly ? undefined : debouncedSave.current}
     >
-      <WelcomeScreen />
+      {/* <WelcomeScreen /> */}
       <MainMenu>
         <MainMenu.DefaultItems.LoadScene />
         <MainMenu.DefaultItems.Export />
