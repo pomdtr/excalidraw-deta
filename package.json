@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "./scripts/refresh-assets.mjs --env dev && next dev",
-    "build": "./scripts/refresh-assets.mjs --env prod && next build",
+    "dev": "node ./scripts/refresh-assets.mjs --env dev && next dev",
+    "build": "node ./scripts/refresh-assets.mjs --env prod && next build",
     "start": "next start",
     "lint": "next lint"
   },
