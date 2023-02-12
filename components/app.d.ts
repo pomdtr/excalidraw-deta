@@ -1,1 +1,1 @@
-type App = (props: { drawing?: text }) => JSX.Element;
+type App = (props: { drawing: text; readonly?: boolean }) => JSX.Element;
