@@ -9,13 +9,13 @@ git: https://github.com/pomdtr/excalidraw-deta
 
 Excalidraw is a free, open-source, whiteboard that lets you easily sketch diagrams that have a hand-drawn feel to them. It's a great tool for sketching wireframes, UI mockups, and more.
 
-## How does it differ from the original Excalidraw Website ?
+## How does it differ from the [Excalidraw.com](https://excalidraw.com) ?
 
 The original Excalidraw is a web app that runs exclusively in your browser. As such, it only saves your drawings to your browser's local storage. This means that if you clear your browser's cache, or if you use a different browser, you will lose all of your drawings.
 
 This version of Excalidraw saves your drawings to your personal cloud. This means that you can access your drawings from any device, and you can even share them with other people.
 
-## How does it differs from Excalidraw+ ?
+## How does it differs from [Excalidraw+](https://plus.excalidraw.com/) ?
 
 See the [Deta Documentation](https://deta.space/docs/en/introduction/personal-cloud) to learn the differences between the public cloud (Excalidraw+) and the personal cloud (Excalidraw Deta).
 
@@ -24,5 +24,14 @@ Excalidraw+ offers far more features than this extension, but it is also more ex
 ## Planned Features
 
 - Handling of multiple drawings
+- Ability to share a view-only version of the drawing
 - Auto-export to png/svg, with a shareable link
 - Teletype-like launcher to control the app
+
+## Limitations
+
+As long as deta will not support websockets, the live-collaboration feature will not be available. If you want to collaborate with other people, use the official website.
+
+## See Also
+
+If you like this project, you might also like my VSCode extension for Excalidraw: [Excalidraw VSCode](https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor).
