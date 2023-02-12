@@ -14,19 +14,23 @@ declare global {
   }
 }
 
-export default function App(props: { blob?: Blob }) {
+export default function App(props: { drawing?: string }) {
   const [initialData, setInitialData] = useState<any>();
 
   useEffect(() => {
-    if (!props.blob) {
+    if (!props.drawing) {
       setInitialData({});
       return;
     }
 
-    loadFromBlob(props.blob, null, null).then((data) => {
-      setInitialData(data);
+    const blob = new Blob([props.drawing], { type: "application/json" });
+    loadFromBlob(blob, null, null).then((data) => {
+      setInitialData({
+        ...data,
+        scrollToContent: true,
+      });
     });
-  }, [props.blob]);
+  }, [props.drawing]);
 
   useEffect(() => {}, []);
   return initialData ? (

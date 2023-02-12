@@ -3,7 +3,6 @@
 import dynamic from "next/dynamic";
 import { Drive } from "deta";
 import { useEffect } from "react";
-import * as Base64 from "js-base64";
 
 const App = dynamic(() => import("../components/app"), {
   ssr: false,
@@ -20,28 +19,23 @@ export async function getServerSideProps() {
     };
   }
 
-  const buf = await blob.arrayBuffer();
+  const drawing = await blob.text();
   return {
     props: {
-      data: Base64.fromUint8Array(new Uint8Array(buf)),
+      drawing,
     },
   };
 }
 
-export default function IndexPage(props: { data?: string }) {
-  let blob: Blob | undefined;
-  if (props.data) {
-    Base64.toUint8Array(props.data);
-    blob = new Blob([Base64.toUint8Array(props.data)]);
-  }
-
+export default function IndexPage(props: { drawing?: string }) {
   useEffect(() => {
     window.EXCALIDRAW_ASSET_PATH = "/";
   }, []);
+
   return (
     <>
       <div style={{ width: "100vw", height: "100vh" }}>
-        <App blob={blob} />
+        <App drawing={props.drawing} />
       </div>
     </>
   );

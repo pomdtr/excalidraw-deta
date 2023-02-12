@@ -1,1 +1,1 @@
-type App = (props: { blob?: Blob }) => JSX.Element;
+type App = (props: { drawing?: text }) => JSX.Element;
