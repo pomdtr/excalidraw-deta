@@ -2,13 +2,12 @@
 title: Excalidraw
 tagline: Excalidraw in your personal cloud
 theme_color: "#e3e2fc"
-icon: assets/logo.png
 git: https://github.com/pomdtr/excalidraw-deta
 ---
 
 ## What is it?
 
-Excalidraw is a free, open-source, whiteboard tool that lets you easily sketch diagrams that have a hand-drawn feel to them. It's a great tool for sketching wireframes, UI mockups, and more.
+Excalidraw is a free, open-source, whiteboard that lets you easily sketch diagrams that have a hand-drawn feel to them. It's a great tool for sketching wireframes, UI mockups, and more.
 
 ## How does it differ from the original Excalidraw Website ?
 
@@ -25,5 +24,5 @@ Excalidraw+ offers far more features than this extension, but it is also more ex
 ## Planned Features
 
 - Handling of multiple drawings
-- Auto export to png/svg, with a shareable link
+- Auto-export to png/svg, with a shareable link
 - Teletype-like launcher to control the app
